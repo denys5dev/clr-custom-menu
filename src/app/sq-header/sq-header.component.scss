@@ -1,0 +1,79 @@
+.header {
+  // .header__logo
+  height: 60px;
+  background-color: #1565c0;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    display: flex;
+    max-width: 180px;
+    height: 100%;
+    cursor: pointer;
+  }
+  // .header__img
+  &__img {
+    fill: #fff;
+    height: auto;
+    width: 40px;
+    display: block;
+    margin: auto 5px auto 15px;
+  }
+  // .header__label
+  &__label {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: auto 15px auto 5px;
+    font-weight: 100;
+  }
+  // .header__menu
+  &__menu {
+    display: flex;
+  }
+  // .header__nav
+  &__nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 60px;
+  }
+  // .header__nav--item
+  &__nav--item {
+    display: block;
+    float: left;
+    transition: ease-in-out 0.3s;
+    min-width: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    height: 60px;
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color: #1565c0, $amount: 8);
+    }
+  }
+  &__nav--link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  // .header__profile
+
+  &__profile {
+  }
+}
+
+.router-link-active {
+  background-color: darken($color: #1565c0, $amount: 8);
+  border-bottom: 2px solid #ff3f3f;
+  height: 58px;
+}

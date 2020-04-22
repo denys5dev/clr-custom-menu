@@ -1,0 +1,18 @@
+<header class="header">
+    <div class="header__logo">
+        <img src="./assets/image/sequoia-new.svg" alt="header__logo" class="header__img">
+        <h5 class="header__label">sequoia</h5>
+    </div>
+    <div class="header__menu">
+        <ul class="header__nav cf">
+            <li class="header__nav--item" *ngFor="let m of menu" routerLinkActive="router-link-active">
+                <a class="header__nav--link" [routerLink]="m.link">
+                    {{m.name}}
+                </a>
+            </li>
+        </ul>
+        <div class="header__profile">
+            <ng-content select="user-profile"></ng-content>
+        </div>
+    </div>
+</header>
