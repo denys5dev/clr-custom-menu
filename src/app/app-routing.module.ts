@@ -1,41 +1,51 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './routes/home/home.component';
 
 const routes: Routes = [
-  { path: "", pathMatch: 'full', redirectTo: '/dashboard/requests-dashboard' },
+  { path: "", pathMatch: 'full', redirectTo: '/dashboard' },
   {
     path: 'dashboard',
-    component: AppComponent,
     children: [
       { path: "", pathMatch: 'full', redirectTo: '/dashboard/requests-dashboard' },
       {
         path: 'requests-dashboard',
-        component: AppComponent
+        component: HomeComponent
       },
       {
         path: 'woe-dashboard',
-        component: AppComponent
+        component: HomeComponent
       }
     ]
   },
   {
     path: 'master-data',
-    component: AppComponent,
     children: [
+      { path: "", pathMatch: 'full', redirectTo: '/master-data/item-master' },
       {
         path: 'item-master',
-        component: AppComponent
+        component: HomeComponent
       }
     ]
   },
   {
     path: 'admin',
-    component: AppComponent,
+    children: [
+      {
+        path: 'admin-master',
+        component: HomeComponent
+      }
+    ]
   },
   {
     path: 'equipment-management',
-    component: AppComponent,
+    children: [
+      {
+        path: 'equipment-master',
+        component: HomeComponent
+      }
+    ]
   },
 ];
 

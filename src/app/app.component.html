@@ -1,4 +1,8 @@
-<div class="main">
+<div class="wrapper">
   <app-sq-header [menu]="menu"></app-sq-header>
   <app-sq-nav [subMenu]="subMenu"></app-sq-nav>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </div>

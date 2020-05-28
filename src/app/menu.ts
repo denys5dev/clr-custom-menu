@@ -39,7 +39,7 @@ export const MENU: Menu[]= [
             id: Guid.create(),
             name: "Item Master",
             sortOrder: 0,
-            link: "/master-dat/item-master",
+            link: "/master-data/item-master",
             icon: null,
             separator: true,
             parentName: "MasterData"
